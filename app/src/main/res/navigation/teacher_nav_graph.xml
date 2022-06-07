@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    app:startDestination="@id/teacherMenuFragment">
+    <fragment
+        android:id="@+id/teacherMenuFragment"
+        android:name="com.example.mycoursework.fragments.teacher.TeacherMenuFragment"
+        android:label="TeacherMenuFragment" >
+        <action
+            android:id="@+id/action_teacherMenuFragment_to_teacherGroupsFragment"
+            app:destination="@id/teacherGroupsFragment" />
+        <action
+            android:id="@+id/action_teacherMenuFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/teacherGroupsFragment"
+        android:name="com.example.mycoursework.fragments.teacher.TeacherGroupsFragment"
+        android:label="TeacherGroupsFragment" >
+        <action
+            android:id="@+id/action_teacherGroupsFragment_to_teacherChildrenFragment"
+            app:destination="@id/teacherChildrenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/teacherChildrenFragment"
+        android:name="com.example.mycoursework.fragments.teacher.TeacherChildrenFragment"
+        android:label="TeacherChildrenFragment" >
+        <action
+            android:id="@+id/action_teacherChildrenFragment_to_statsFragment"
+            app:destination="@id/statsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/statsFragment"
+        android:name="com.example.mycoursework.fragments.profile.StatsFragment"
+        android:label="StatsFragment" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.mycoursework.fragments.profile.ProfileFragment"
+        android:label="ProfileFragment" >
+        <action
+            android:id="@+id/action_profileFragment_to_profileChangeFragment"
+            app:destination="@id/profileChangeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileChangeFragment"
+        android:name="com.example.mycoursework.fragments.profile.ProfileChangeFragment"
+        android:label="ProfileChangeFragment" />
+</navigation>

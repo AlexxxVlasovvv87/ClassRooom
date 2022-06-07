@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dialog">
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="300dp"
+        android:layout_height="75dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="79dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="81dp"
+        android:layout_marginBottom="19dp"
+        android:background="@drawable/button_background_dialogs"
+        android:fontFamily="@font/sf_pro_bold"
+        android:text="@string/save_profile"
+        android:textColor="@color/dark_blue_green"
+
+        android:textSize="23sp"
+        app:layout_constraintBottom_toTopOf="@+id/delete_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/new_surname" />
+
+    <Button
+        android:id="@+id/delete_button"
+        android:layout_width="300dp"
+        android:layout_height="75dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="79dp"
+        android:layout_marginEnd="81dp"
+        android:layout_marginBottom="9dp"
+        android:background="@drawable/button_background_dialogs"
+        android:fontFamily="@font/sf_pro_bold"
+        android:text="@string/delete_profile"
+        android:textColor="@color/red"
+        android:textSize="23sp"
+
+        app:layout_constraintBottom_toTopOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/save_button"
+        app:layout_constraintVertical_bias="0.096" />
+
+    <Button
+        android:id="@+id/backButton3"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_chevron_left_black_24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_redact"
+        android:layout_width="289dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/sf_pro_bold"
+        android:text="@string/redact"
+        android:textAlignment="center"
+        android:textColor="@color/dark_blue_green"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.652"
+        app:layout_constraintStart_toEndOf="@+id/backButton3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread_inside"
+        tools:ignore="NotSibling,UnknownIdInLayout" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="216dp"
+        android:layout_height="171dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.975"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/delete_button"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@mipmap/rubin"
+        tools:ignore="ContentDescription" />
+
+    <EditText
+        android:id="@+id/new_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="5dp"
+        android:autofillHints=""
+        android:ems="15"
+        android:inputType="textPersonName"
+        android:text="@string/old_name"
+        app:layout_constraintBottom_toTopOf="@+id/text_surname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_name"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/new_surname"
+        android:layout_width="324dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="16dp"
+        android:autofillHints=""
+        android:ems="15"
+        android:inputType="textPersonName"
+        android:text="@string/old_surname"
+        app:layout_constraintBottom_toTopOf="@+id/save_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_surname"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/text_name"
+        android:layout_width="325dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginBottom="7dp"
+        android:fontFamily="@font/sf_pro_bold"
+        android:text="@string/create_new_name"
+        android:textAlignment="center"
+        android:textColor="@color/dark_blue_green"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/new_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="NotSibling" />
+
+    <TextView
+        android:id="@+id/text_surname"
+        android:layout_width="325dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/sf_pro_bold"
+        android:text="@string/create_new_surname"
+        android:textAlignment="center"
+        android:textColor="@color/dark_blue_green"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toTopOf="@+id/new_surname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/new_name"
+        tools:ignore="NotSibling" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

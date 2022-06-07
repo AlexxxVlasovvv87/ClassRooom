@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    app:startDestination="@id/studentMenuFragment">
+    <fragment
+        android:id="@+id/studentMenuFragment"
+        android:name="com.example.mycoursework.fragments.student.StudentMenuFragment"
+        android:label="StudentMenuFragment" >
+        <action
+            android:id="@+id/action_studentMenuFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileChangeFragment"
+        android:name="com.example.mycoursework.fragments.profile.ProfileChangeFragment"
+        android:label="ProfileChangeFragment" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.mycoursework.fragments.profile.ProfileFragment"
+        android:label="ProfileFragment" >
+        <action
+            android:id="@+id/action_profileFragment_to_profileChangeFragment"
+            app:destination="@id/profileChangeFragment" />
+    </fragment>
+</navigation>

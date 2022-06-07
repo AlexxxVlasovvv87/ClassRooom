@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    app:startDestination="@id/adminMenuFragment">
+    <fragment
+        android:id="@+id/adminMenuFragment"
+        android:name="com.example.mycoursework.fragments.admin.AdminMenuFragment"
+        android:label="AdminMenuFragment" >
+        <action
+            android:id="@+id/action_adminMenuFragment_to_adminGroupsFragment"
+            app:destination="@id/adminGroupsFragment" />
+        <action
+            android:id="@+id/action_adminMenuFragment_to_adminUsersFragment"
+            app:destination="@id/adminUsersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminGroupsFragment"
+        android:name="com.example.mycoursework.fragments.admin.AdminGroupsFragment"
+        android:label="AdminGroupsFragment" >
+        <action
+            android:id="@+id/action_teacherGroupsFragment_to_teacherChildrenFragment"
+            app:destination="@id/teacherChildrenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/teacherGroupsFragment"
+        android:name="com.example.mycoursework.fragments.teacher.TeacherGroupsFragment"
+        android:label="TeacherGroupsFragment" >
+        <action
+            android:id="@+id/action_teacherGroupsFragment_to_teacherChildrenFragment"
+            app:destination="@id/teacherChildrenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/teacherChildrenFragment"
+        android:name="com.example.mycoursework.fragments.teacher.TeacherChildrenFragment"
+        android:label="TeacherChildrenFragment" >
+        <action
+            android:id="@+id/action_teacherChildrenFragment_to_statsFragment"
+            app:destination="@id/statsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/statsFragment"
+        android:name="com.example.mycoursework.fragments.profile.StatsFragment"
+        android:label="StatsFragment" />
+    <fragment
+        android:id="@+id/adminUsersFragment"
+        android:name="com.example.mycoursework.fragments.admin.AdminUsersFragment"
+        android:label="AdminUsersFragment" >
+        <action
+            android:id="@+id/action_adminUsersFragment_to_teacherGroupsFragment"
+            app:destination="@id/teacherGroupsFragment" />
+        <action
+            android:id="@+id/action_adminUsersFragment_to_statsFragment"
+            app:destination="@id/statsFragment" />
+        <action
+            android:id="@+id/action_adminUsersFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.mycoursework.fragments.login.RegisterFragment"
+        android:label="RegisterFragment" />
+</navigation>

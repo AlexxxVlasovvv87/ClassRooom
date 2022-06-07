@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    app:startDestination="@id/signInMenuFragment">
+
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.mycoursework.fragments.login.SignInFragment"
+        android:label="SignInFragment" />
+    <fragment
+        android:id="@+id/signInMenuFragment"
+        android:name="com.example.mycoursework.fragments.login.SignInMenuFragment"
+        android:label="SignInMenuFragment" >
+        <action
+            android:id="@+id/action_signInMenuFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_signInMenuFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_signInMenuFragment_to_adminSignInFragment"
+            app:destination="@id/adminSignInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.mycoursework.fragments.login.RegisterFragment"
+        android:label="RegisterFragment" />
+    <fragment
+        android:id="@+id/adminSignInFragment"
+        android:name="com.example.mycoursework.fragments.admin.AdminSignInFragment"
+        android:label="AdminSignInFragment" />
+</navigation>
